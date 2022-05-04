@@ -1,9 +1,14 @@
+import { H1 } from "@blueprintjs/core";
+
 const Title = () => {
   return (
     <header>
-      <h1>Image Search App</h1>
+      <H1 className={"pt-2 text-white"}>Image Search App</H1>
       <p>
-        By <a href="https://unsplash.com/">Unsplash</a>
+        By{" "}
+        <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
+          Unsplash
+        </a>
       </p>
     </header>
   );

@@ -1,3 +1,5 @@
+import { Button, InputGroup } from "@blueprintjs/core";
+
 const Form = ({
   setWord,
   executeSearch,
@@ -6,18 +8,24 @@ const Form = ({
   executeSearch: () => void;
 }) => {
   return (
-    <div>
-      <form>
-        <input
-          type="text"
-          name="keyword"
-          placeholder="e.g. cat"
-          onChange={(e) => setWord(e.target.value)}
-        />
-        <button type="button" onClick={() => executeSearch()}>
-          Search
-        </button>
-      </form>
+    <div className="grid grid-cols-6 gap-2 mt-2 mb-4">
+      <InputGroup
+        type="text"
+        name="keyword"
+        placeholder="e.g. cat"
+        onChange={(e) => setWord(e.target.value)}
+        className={"col-start-2 col-end-5"}
+        large
+        round
+      />
+      <Button
+        type="button"
+        intent="success"
+        className="rounded"
+        onClick={() => executeSearch()}
+      >
+        Search
+      </Button>
     </div>
   );
 };
