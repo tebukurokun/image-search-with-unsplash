@@ -3,9 +3,11 @@ import { Button, InputGroup } from "@blueprintjs/core";
 const Form = ({
   setWord,
   executeSearch,
+  isActive,
 }: {
   setWord: (word: string) => void;
   executeSearch: () => void;
+  isActive: boolean;
 }) => {
   return (
     <div className="grid grid-cols-6 gap-2 mt-2 mb-4">
@@ -23,6 +25,7 @@ const Form = ({
         intent="success"
         className="rounded"
         onClick={() => executeSearch()}
+        disabled={!isActive}
       >
         Search
       </Button>
