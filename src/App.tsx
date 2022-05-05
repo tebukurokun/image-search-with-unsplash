@@ -47,7 +47,7 @@ function App() {
       } as PhotoData;
     });
 
-    console.info(photoData);
+    console.debug(photoData);
 
     return photoData;
   };
