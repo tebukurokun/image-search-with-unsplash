@@ -29,6 +29,7 @@ function App() {
 
     if (!response) {
       setHasMore(false);
+      alert("Error Occurred");
       return [];
     }
 
@@ -62,7 +63,7 @@ function App() {
   const loadMore = async () => {
     setPage(page + 1);
     const photoData = await executeSearch(word, page + 1);
-    if (photoData.length === 0 || page > 10) {
+    if (photoData.length === 0 || page > 4) {
       setHasMore(false);
     }
     setPhotos([...photos, ...photoData]);
