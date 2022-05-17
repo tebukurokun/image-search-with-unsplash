@@ -10,7 +10,7 @@ const Form = ({
   isActive: boolean;
 }) => {
   return (
-    <div className="grid grid-cols-6 gap-2 mt-2 mb-4">
+    <div className="sticky top-0 py-4 bg-slate-900/40 grid grid-cols-6 gap-2 mt-1 mb-1">
       <InputGroup
         type="text"
         name="keyword"
